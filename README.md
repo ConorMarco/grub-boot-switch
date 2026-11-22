@@ -49,7 +49,8 @@ If the board isn't plugged in, the search fails, the block does nothing, and GRU
 | Dupont jumper wires | Male-to-male, male-to-female and female-to-female. They let you take everything apart without unsoldering. |
 | 2-pin Dupont Y splitter | So the case's own power button keeps working. |
 | Micro-USB cable | It must be a data cable, not a charge-only one. |
-| Heat shrink or electrical tape | |
+| Heat shrink or electrical tape | To insulate the soldered joints. |
+| Cardboard and duct tape | To pack the space behind the switches if you mount them in a desk pocket. See [Mount the switches](#4-mount-the-switches). |
 
 **Tools:** soldering iron, a multimeter with a continuity beep, and a router or drill if you're setting the switches into a desk.
 
@@ -149,11 +150,11 @@ I set both into the front edge of my desk:
 - **Pocket:** cut it from underneath with a hand router, leaving only a thin front wall for the switches to mount through.
 - **Underside:** it can be as rough as you like, because nobody sees it.
 - **Front face:** take your time here. It's the only part on show, and the switch's nut and washer have to cover the edge of the hole.
-- **Insulation:** tape over the backs of the switches stops the bare terminals from touching each other or the wiring.
+- **Backing:** a thin front wall alone lets the switches and button push back into the pocket when you press them. Cut a piece of cardboard to fill the gap between the back of each switch and the back wall of the pocket. Then duct-tape it in place, so each switch is held firmly against the front.
 
-![The routed pocket on the underside of the desk, with taped-over switch terminals and Dupont leads](docs/images/04-desk-underside.jpg)
+![The routed pocket on the underside of the desk, with cardboard and duct tape packed behind the switches, and Dupont leads](docs/images/04-desk-underside.jpg)
 
-*The pocket from underneath. Tape covers the switch terminals, and the Dupont joins hang below so everything unplugs.*
+*The pocket from underneath. Cardboard cut to size and held with duct tape packs the space behind the switches, so they can't be pushed in. The Dupont joins hang below, so everything unplugs.*
 
 ## 5. Plug the board into the PC
 
