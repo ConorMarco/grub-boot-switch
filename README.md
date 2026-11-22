@@ -47,7 +47,7 @@ If the board isn't plugged in, the search fails, the block does nothing, and GRU
 | ON-OFF-ON toggle switch | Three positions with a true centre-off. I used a standard one from Home Depot. An ON-ON switch has no middle position. |
 | Momentary push button, normally open | For power. A *latching* button would hold the motherboard's power pins closed and force a shutdown after about 4 seconds. |
 | Dupont jumper wires | Male-to-male, male-to-female and female-to-female. They let you take everything apart without unsoldering. |
-| 2-pin Dupont Y splitter | So the case's own power button keeps working. |
+| Two Dupont Y splitters (1 to 2) | One per power switch pin, so the case's own power button keeps working. |
 | Micro-USB cable | It must be a data cable, not a charge-only one. |
 | Heat shrink or electrical tape | To insulate the soldered joints. |
 | Cardboard and duct tape | To pack the space behind the switches if you mount them in a desk pocket. See [Mount the switches](#4-mount-the-switches). |
@@ -133,9 +133,12 @@ A PC's power button is just a momentary switch across two pins on the motherboar
 
 1. Find the power switch pins in your motherboard manual. They're on the front-panel header, often called `JFP1` or `F_PANEL`, and labelled `PWR_SW`, `PW+`/`PW-` or `POWER SW`. Polarity doesn't matter for a switch.
 2. Pull the case's power button connector off those two pins.
-3. Plug the Y splitter onto the pins, and plug the case's button into one branch.
-4. Run Dupont extension leads from the other branch out of the case. I threaded them through a gap in the case.
-5. Solder two leads to the new button's terminals and plug them into the extension leads.
+3. Plug a Y splitter onto each of the two pins.
+4. Plug the case's button connector into one branch of each splitter.
+5. Run Dupont extension leads from the other two branches out of the case. I threaded them through a gap in the back.
+6. Solder two leads to the new button's terminals. Join them to the extension leads outside the case with Dupont connectors.
+
+![Diagram: a Y splitter on each PWR_SW pin; one branch of each goes to the case power button, the other to extension leads that leave the case and join the desk power button's leads](docs/images/power-wiring.svg)
 
 ![Two Dupont leads leaving the back of the PC case through a gap](docs/images/03-case-exit.jpg)
 
