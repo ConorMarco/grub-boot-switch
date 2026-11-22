@@ -1,0 +1,18 @@
+#!/bin/sh
+exec tail -n +3 $0
+# Hardware boot switch (https://github.com/conormarco/grub-boot-switch).
+# Installed by scripts/install-grub.sh, which fills in the two entry IDs.
+#   Switch on Linux or Windows: boot that entry immediately.
+#   Switch in the middle:       show the menu and wait with no countdown.
+#   Board missing:              this block does nothing, so the normal menu applies.
+if search --no-floppy --fs-uuid --set=hwsw B007-5317; then
+  if [ -f ($hwsw)/linux.sw ]; then
+    set default="@LINUX_ID@"
+    set timeout=0
+  elif [ -f ($hwsw)/windows.sw ]; then
+    set default="@WINDOWS_ID@"
+    set timeout=0
+  else
+    set timeout=-1
+  fi
+fi

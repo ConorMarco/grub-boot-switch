@@ -1,0 +1,5 @@
+# Boot switch: Pro Micro running firmware/bootswitch (USB ID 03eb:2068).
+# Serial port: usable by the logged-in user, stable name /dev/bootswitch, ignored by ModemManager.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2068", TAG+="uaccess", SYMLINK+="bootswitch", ENV{ID_MM_DEVICE_IGNORE}="1"
+# Drive: hidden from the desktop, readable by the logged-in user for testing. It is write-protected.
+SUBSYSTEM=="block", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2068", TAG+="uaccess", ENV{UDISKS_IGNORE}="1"
